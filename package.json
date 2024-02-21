@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "kasql-build": "node kasql/build.js"
+    "kasql-build": "node kasql/build.js",
+    "migrate": "knex migrate:latest"
   },
   "keywords": [],
   "author": "",
