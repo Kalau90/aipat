@@ -1,0 +1,3 @@
+[submodule "kasql"]
+	path = kasql
+	url = git@codeberg.org:kzxpr/kasql.git

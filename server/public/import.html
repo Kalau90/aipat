@@ -1,0 +1,194 @@
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<style type="text/css">
+    .hidden{
+        display: none;
+    }
+    </style>
+    <div id="content" class="wide">
+        <h1>Import data from Airtable here!</h1>
+        <div style="display: flex; flex-direction: row; width: 100%;">
+            <div style="width: 85%">
+                <div style="display: flex; width: 100%; justify-content: space-between">
+                    <div>
+                        <button id="sendPost" class="button button--large">IMPORT</button>
+                    </div>
+                    <div>
+                        <div id="output_controls"></div>
+                    </div>
+                </div>
+    
+                <table id="output" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <td style="width: 5%;">Log</td>
+                            <td>Message</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+    
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td style="text-align: center;">-</td>
+                            <td>Press 'Import' to import changes in Airtable, or press a timestamp on the right to see a previous log.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+    
+                <script type="text/javascript">
+                const statuses = [
+                    {
+                        value: "log",
+                        active: false
+                    },
+                    {
+                        value: "note",
+                        active: false
+                    },
+                    {
+                        value: "warn",
+                        active: true
+                    },
+                    {
+                        value: "error",
+                        active: true
+                    }
+                ]
+    
+                function makeOutputControls(data){
+                    d3.select("#output_controls").selectAll("*").remove()
+                    const { warnings, notices, status, logs } = data;
+                    const all_logs = logs.length - warnings - notices - status;
+                    const n_msg = {
+                        log: all_logs,
+                        note: notices,
+                        warn: warnings,
+                        error: status
+                    }
+                    for(let status of statuses){
+                        d3.select("#output_controls")
+                            .append("button")
+                            .classed("button", true)
+                            .classed("button--small", true)
+                            .classed("button--dimmed", status.active)
+                            .text(status.value + " (" + n_msg[status.value] + ")")
+                            .on("click", function(){
+                                const inactive = !d3.select(this).classed("button--dimmed")
+                                
+                                if(!inactive){
+                                    d3.selectAll("."+status.value).each(function(){
+                                        const elm = d3.select(this.closest("tr"));
+                                        elm.style("display", "none")
+                                    })
+                                }else{
+                                    d3.selectAll("."+status.value).each(function(){
+                                        const elm = d3.select(this.closest("tr"));
+                                        elm.style("display", "")
+                                    });
+                                }
+                                
+                                d3.select(this).classed("button--dimmed", inactive)
+                            })
+                    }
+                }
+    
+                function showLog(data){
+                    const tbody = d3.select("#output").select("tbody");
+                        const tfoot = d3.select("#output").select("tfoot");
+                        const thead = d3.select("#output").select("thead");
+                        tbody.selectAll("*").remove();
+                        tfoot.selectAll("*").remove();
+    
+                        makeOutputControls(data);
+                        
+                        let opsum_class = "text--callout--confirm"
+                        let report = "OK"
+                        if(data.httpcode!=200 || data.status != 0 || !data.fin){
+                            report = "FAILED"
+                            opsum_class = "text--callout--warning"
+                        }
+    
+                        const foottr = tfoot.append("tr")
+                            .classed(opsum_class, true)
+                        foottr
+                            .append("td")
+                            .style("text-align", "center")
+                            .style("border-top", "5px solid #000")
+                            .text(report)
+                        const dd = new Date();
+                        const dd_str = dd.toISOString();
+                        
+                        foottr.append("td")
+                            .style("border-top", "5px solid #000")
+                            .html("<ul><li>Import run: " + dd_str+"</li><li>Error(s): " + data.status + "</li><li>Warning(s): "+data.warnings+"</li><li>Finished: " + (data.fin ? "Yes" : "No")+"</li></ul>")
+                        for(let log of data.logs){
+                            let classname = "log"
+                            let label = "log"
+                            let icon = "";
+                            switch(log.status){
+                                case 1:
+                                    label = "note";
+                                    classname = "note";
+                                    icon = "";
+                                    break;
+                                case 2:
+                                    label = "warn";
+                                    classname = "text--callout--attention";
+                                    icon = "";
+                                    break;
+                                case 3:
+                                    label = "error";
+                                    classname = "text--callout--warning";
+                                    icon = ""
+                                    break;
+                                default: label = "log"; classname = "text--callout--confirm"; break;
+                            }
+                            let display = statuses.find((v) => {
+                                return v.value == label
+                            });
+                            const displayval = (display && display['active']) ? '' : 'none';
+                            const line = tbody.append("tr")
+                                .classed(classname, true)
+                                .style("display", displayval)
+                            line.append("td")
+                                .style("font-family", "font-awesome")
+                                .style("text-align", "center")
+                                .text(icon)
+                            line.append("td")
+                                .text(log.msg)
+                                .classed(label, true)
+                        }
+                        d3.select("#sendPost").classed("button--processing", false).attr("disabled", null)
+                        
+                }
+    
+                document.getElementById('sendPost').addEventListener('click', function() {
+                    d3.select("#sendPost").classed("button--processing", true).attr("disabled", "disabled")
+    
+                    // clear shown log
+                    d3.select("#output").select("tbody").selectAll("*").remove()
+                    d3.select("#output").select("tfoot").selectAll("*").remove()
+    
+                    // Use D3.js to send a POST request
+                    d3.json('/admin/kasql/import', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            // other headers as needed
+                        }
+                    })
+                    .then(data => {
+                        console.log('Response:', data);
+                        showLog(data)
+                    })
+                    .catch(error => {
+                        console.log(error)
+                        alert("Unhandled error!")
+                    });
+                });
+                </script>
+            </div>
+        
+        </div>
+    </div>

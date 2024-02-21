@@ -1,0 +1,1522 @@
+{
+  "status": 0,
+  "warnings": 2,
+  "notices": 49,
+  "fin": true,
+  "logs": [
+    {
+      "status": 0,
+      "msg": "Airtable API access established"
+    },
+    {
+      "status": 0,
+      "msg": "Imported tables from Airtable"
+    },
+    {
+      "status": 0,
+      "msg": "Loaded db_joins from /server/config.js"
+    },
+    {
+      "status": 0,
+      "msg": "Loaded db_tables from /server/config.js"
+    },
+    {
+      "status": 0,
+      "msg": "Table 'Cases BSS' (id: tblEjDjf6b3qJNL5j) was found in Airtable"
+    },
+    {
+      "status": 0,
+      "msg": "Table 'Situationals' (id: tbl5az5a8GnsehW3M) was found in Airtable"
+    },
+    {
+      "status": 0,
+      "msg": "Table 'Cases TECH' (id: tblCv9RKlDsLXnua0) was found in Airtable"
+    },
+    {
+      "status": 2,
+      "msg": "WARNING: The Airtable 'Cases TECH' is unconfigured. Table is ignored."
+    },
+    {
+      "status": 0,
+      "msg": "Table 'Assessment' (id: tblhnbpL6DOhP81ac) was found in Airtable"
+    },
+    {
+      "status": 2,
+      "msg": "WARNING: The Airtable 'Assessment' is unconfigured. Table is ignored."
+    },
+    {
+      "status": 0,
+      "msg": "Truncated mysql table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "Fetched 150 items for 'examples' (id: tblEjDjf6b3qJNL5j)"
+    },
+    {
+      "status": 0,
+      "msg": "Truncated MySQL table 'examples'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec0hx9qAVToWK6iF' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec18HdopDqMfCh2G' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec2Aba38ymboyn8K' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rec2QN0oTg4fth9yZ). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec2oTeUFSkvCdN5V' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec2rAskRFVmKdsKf' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec2xKTqnrfGSB4lS' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec33f8ioPiI5IxOj' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec4jkeOgnd2ALHWE' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rec4zlLsCQs2m7x5H). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec5zqtXDeHBLEb7Y' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec64HmR0Om10HvYp' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rec6E4xliF98GWr8Y). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec6MHedbEvfujlkt' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rec6Razc87KTQstG1). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec6a6DotW0Xs7neh' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rec6i5wZgbXrEFIGG). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rec7BaHT5OgjxQkgX). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec7vGgnlC7bD3Ffn' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec83Xn7iFV09QYyD' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rec8hlO6XZGCoseNk' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rec90YfZVdC0DP1wu). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rec9CJWJmK6eyHjiU). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rec9pg4Cff7grQ8Tx). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recA0xD8g2i2EcFac). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recAPK7LzNOhsBpm1' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recAcezNYG3lNLtGD' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recB5HnQhGSerqbHn' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recBBKfQdHfU587GE). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recCLaI5m3NxpDugd' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recCPjD30d05xh3mV' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recCenNkH5ZpsGhTq). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recDFKtydI8r1XBsg' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recDV680GaOuhvCqc' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recDc1AbysiLhaf9A' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recDpUmxrDvuRBpbQ' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recE9vpHHAtbBrE8T). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recFbvIRXW9ewrEv5' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recFqBpSpIz6DTFZQ' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recFuqUuOixt1rT1X' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recGJYcztBkIrzWS8' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recGOycSaInM1ue0G' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recGS2WUtwcmJ6XEf' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recGu0ioi12KP3rkx). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recHCdeZ2H82dGxa1). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recHZL73joEkvC2Yn). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recHaCwrxw1yeh4Ly' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recHru1IGMiQltfWC' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recI0e1CY2fpENHyO' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recIBo0L9eIM8CDEO' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recIK7la2T9wR63xE' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recIhssoda08UCO3F). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recJ3wgAjUuR6CiDR' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recJzF0EwGxLCbCAF' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recKBe1sySJLdoYec' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recKxVSJvvPYQmaGS). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recLTmfT9BuA4JMIt' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recLhtowakGNFkAfA). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recLv4OA3pKuop2T2). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recM8QkSSLbIsonN9). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recMR5FTR7PsMkovo' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recN3wdS4AtojUprN' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recNJe24vFLI61fVj' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recNLLldMagLIPiKj' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recOR9BluPvBAOPVx). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recOVyvdB2sujZvdh). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recOZOaPNP9nFWQDd' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recOuEyT8YZ7AoW0a' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recPDwjKWMK2b2NVD' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recPUaSl97WwWNzhC' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recPs9WQxJMD44lDo' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recQ2cDTU7Tla0QNs). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recQRo9UCMDbl0J63' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recRPoQLcR2q9x6O9). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recRfX4uwkwLwlZZ2' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recRg4WGCkpGIva69' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recT1ZUG2wIPHyXy4' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recTXPH44YXK74iDu' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recTfOYUzPSxkLAmx). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recV5u8o1BsxrVoKq' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recVXxNw3fLDKROdP). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recVkrUBWbSiDVXUS). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recVnjimzOlKpRG7M' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recWPLHbIjw7N0r3B). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recWrqDT087P6LOVx' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recX4TbaPnJZqanol' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recXFSxCSnb6kY2uV' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recXKKNg1AIowOkqQ' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recYi1vPccI3TGBh6' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recYvSBqOw9Sy80xN). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recZLIgyHjD7q4zHU). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recaw1eDbARQj0P4L' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recay2nYOC7LUKtAC' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recbfEu1SxNuJoOqp). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recbuIZNwUbga6NE3' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recc5OiyQl8md0ysj' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recckGZoN93B4DgMM' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: reccmBY2kUP6M81EM). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recdFTBXQDj0RcxmU' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recdsFLk58tyIxknH). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: receG4p8g5m6x76Ow). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'receNrsKRGoQLNnGE' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'receixkcSeSeRHDZ2' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recffiD1ufFwUrnVz' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recg27kSlmJ1m0lQl). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recgFO7qbDpjrH1BY). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recgNnjeljQc4QIoH). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recgSLFRhNblSHUrg' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recgoMZ3Aqcdn8on1' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'rechfdfDsxsFAs8jM' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'reciM48QbscCThcpq' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'reciUr6hWvDqHWssa' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recifEPg5TSPsdaN7). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recjJVddjTb7ZOaz8). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recjLJHRVGZzgBtQE' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recjoZGTWU7j9h7ua' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recjscjIAmwVAITGk' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'reckNXK8eARkwVGQj' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'reckT9MNwjlIVifmD' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recl6dbybjzKddagU' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'reclwoQHDiPrB5Kpm' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'reclyYZrQkdaPBxHI' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recmGIUBFROpjlrfO' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recmpmpOdD5vyk2Yw' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recmtRXUlMA3NRCP9' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recnDaSFLlCVmmehn). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recnVEFDiTtaX0H1o' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recnXLv2CEZMSNsH6). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recnY61VBPbytmQt3' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recng8r0f3POwVeln). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recowe6GOYCLeX72w' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recGBbrW2H6DNJNhL)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recp7xVi2pd07KF81' to 'recGBbrW2H6DNJNhL' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recpSg3HXmNzSXgS5' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recpcAEDeeaHp70Mp). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recqmxrhi0rDaIlME' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recsCD5Tgj1P2t04t' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recsTOpEroxUpos5N). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recsdAsSpvvASuu7F' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recsstboS1suz5Znt). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: rectyFx0EkHCa3O2J). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recu6jXnRRHObTeKI). The item was ignored"
+    },
+    {
+      "status": 1,
+      "msg": "NOTICE: No 'pageid' on undefined/undefined in examples (rec id: recuTROBSIqtlb62x). The item was ignored"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recvA8fzgG9GWvf9C' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recvf2OSHUooh71ZP' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recC02z5zt0PD8jBN)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recvnaOh0NB3IsVJ1' to 'recC02z5zt0PD8jBN' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recwGXMBIVdSjcIN0' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recwIykAZK8KRYsES' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz13Xb0FkX4QdLy)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recxBYQviOVl1j7qF' to 'recz13Xb0FkX4QdLy' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recog6mjVCWDmQ3QW)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recxYVuI9ztGDUuQO' to 'recog6mjVCWDmQ3QW' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in examples"
+    },
+    {
+      "status": 0,
+      "msg": "Found join for field 'Situationals' (values: recz915pfLfgARtXz)"
+    },
+    {
+      "status": 0,
+      "msg": "Insert join 'recyWlW1aoylZ3Ehe' to 'recz915pfLfgARtXz' in table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "Fetched 11 items for 'situationals' (id: tbl5az5a8GnsehW3M)"
+    },
+    {
+      "status": 0,
+      "msg": "Truncated MySQL table 'situationals'"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    },
+    {
+      "status": 0,
+      "msg": "No English title on 'undefined' in situationals"
+    }
+  ],
+  "data": {},
+  "httpcode": 200
+}
