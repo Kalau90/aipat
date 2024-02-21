@@ -19,8 +19,6 @@ app.get("/", async(req, res) => {
         }
         html += "</div>"
         html += item.description+"<br>";
-        html += "SITUATIONALS<br>"
-        
         html += "</div>"
     }
     html += "</div>"
