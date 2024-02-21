@@ -11,8 +11,8 @@ COPY . .
 
 EXPOSE 3001
 
-#RUN npm run migrate
+RUN npm run migrate
 
-#RUN npm run kasql-build
+RUN npm run kasql-build
 
 CMD ["npm", "start"]
