@@ -6,10 +6,10 @@ const { Example } = require("./kasql/out/models")
 
 app.use("/admin", require("./server/admin"))
 
-app.get("/examples", async(req, res) => {
+app.get("/", async(req, res) => {
     const items = await Example.query().withGraphFetched("situationals")
 
-    var html = "<div style='display: flex; flex-direction: row; flex-wrap: wrap; width: 100%;'>";
+    var html = "<h1>AI PAT</h1><div style='display: flex; flex-direction: row; flex-wrap: wrap; width: 100%;'>";
     for(let item of items){
         html += "<div style='width: 250px; height: 300px; border: 1px solid #000; margin: 10px; padding: 10px; overflow: auto;'>";
         html += "<b>"+item.title+"</b><br>"
@@ -28,7 +28,7 @@ app.get("/examples", async(req, res) => {
 })
 
 app.get("*", async(req, res) => {
-    res.send("HELLO MADS")
+    res.send("Not found")
 })
 
 app.listen(port, () => {
