@@ -50,8 +50,8 @@ class Cockpit{
                 break;
             }
             const box = document.createElement("div");
-            box.innerHTML = "<span class='heading'>"+item.title+"</span><br>";
-            box.innerHTML += item.name+"<br>";
+            box.innerHTML += "<div>"+item.name+"</div>";
+            box.innerHTML = "<span class='heading'>"+item.title+"</span>";
             box.innerHTML += "<button>Læs mere</button>"
             box.classList.add("box")
             wrap.appendChild(box)
