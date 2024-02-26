@@ -1,6 +1,6 @@
 require("dotenv-flow").config();
 const basicAuth = require('express-basic-auth')
-const ced_code = process.env.CED_CODE || "1234";
+const ced_code = process.env.CED_CODE;
 
 function getUnauthorizedResponse(req) {
     return req.auth

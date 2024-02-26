@@ -1,0 +1,74 @@
+{
+  "status": 1,
+  "warnings": 1,
+  "notices": 0,
+  "fin": false,
+  "logs": [
+    {
+      "status": 0,
+      "msg": "Airtable API access established"
+    },
+    {
+      "status": 0,
+      "msg": "Imported tables from Airtable"
+    },
+    {
+      "status": 0,
+      "msg": "Loaded db_joins from /server/config.js"
+    },
+    {
+      "status": 0,
+      "msg": "Loaded db_tables from /server/config.js"
+    },
+    {
+      "status": 0,
+      "msg": "Table 'Cases' (id: tblEjDjf6b3qJNL5j) was found in Airtable"
+    },
+    {
+      "status": 0,
+      "msg": "Table 'Situationals' (id: tbl5az5a8GnsehW3M) was found in Airtable"
+    },
+    {
+      "status": 0,
+      "msg": "Table 'Faculty' (id: tbloZ0JAxpCX7aBrr) was found in Airtable"
+    },
+    {
+      "status": 0,
+      "msg": "Table 'Complexity' (id: tblHXNe3bkrq3oLFT) was found in Airtable"
+    },
+    {
+      "status": 0,
+      "msg": "Table 'Assessment' (id: tblhnbpL6DOhP81ac) was found in Airtable"
+    },
+    {
+      "status": 2,
+      "msg": "WARNING: The Airtable 'Assessment' is unconfigured. Table is ignored."
+    },
+    {
+      "status": 0,
+      "msg": "Truncated mysql table 'examplesvssituationals'"
+    },
+    {
+      "status": 0,
+      "msg": "Truncated mysql table 'examplevsfaculty'"
+    },
+    {
+      "status": 0,
+      "msg": "Truncated mysql table 'examplevscomplexity'"
+    },
+    {
+      "status": 0,
+      "msg": "Fetched 150 items for 'examples' (id: tblEjDjf6b3qJNL5j)"
+    },
+    {
+      "status": 0,
+      "msg": "Truncated MySQL table 'examples'"
+    },
+    {
+      "status": 3,
+      "msg": "ERROR: Can't add 'undefined'/'undefined' (id: rec0hx9qAVToWK6iF) to table 'examples'. Message: Error: insert into `examples` (`description`, `name`, `recid`, `title`) values ('Objective: Introduce students to the application of AI in analyzing social networks within the field of sociology. Lecture: Discuss basic AI concepts relevant to social network analysis. Present examples of how AI tools can be used to analyze patterns and connections within social networks. Hands-On Exercise: Provide a simple hands-on exercise where students use basic AI-driven tools for social network analysis. They can explore a sample dataset and interpret the results. Assessment: Evaluate the outcomes of the hands-on exercise and ask students to write a short reflection on how AI tools can enhance social network analysis in sociology.', 'Case 29', 'rec0hx9qAVToWK6iF', 'AI and Social Network Analysis in Sociology') - ER_BAD_FIELD_ERROR: Unknown column 'name' in 'field list'"
+    }
+  ],
+  "data": {},
+  "httpcode": 500
+}
