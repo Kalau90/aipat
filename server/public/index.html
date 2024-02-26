@@ -1,0 +1,22 @@
+<h1>AI PAT</h1>
+Aarhus universitet<br>
+About - HOME
+<hr>
+
+<script type="text/javascript" src="/scripts/main.js"></script>
+<link rel="stylesheet" href="/scripts/style.css">
+<div id="main" style="border: 1px solid #000; width: 100%; max-width: 1000px; height: 600px; margin: auto;">
+</div>
+
+<script>
+const aipat = new Cockpit("main");
+
+aipat.configure({
+    left_endpoint: "/api/getItems/faculty",
+    top_endpoint: "/api/getItems/situationals",
+    right_endpoint: "/api/getItems/complexity",
+    main_endpoint: "/api/getitems/examples"
+})
+
+aipat.render();
+</script>

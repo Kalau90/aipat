@@ -1,0 +1,38 @@
+.top{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+button{
+    border-radius: 10px;
+    font-size: 16pt;
+}
+
+.sel{
+    background: #aaf;
+    
+}
+
+.items{
+    min-width: 500px;
+}

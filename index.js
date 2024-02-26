@@ -1,15 +1,31 @@
 const express = require("express")
 const app = express();
 const port = 3001;
+const path = require("path")
 
-const { Example } = require("./kasql/out/models")
+const { Example, Situational } = require("./kasql/out/models")
 
 app.use("/admin", require("./server/admin"))
 
-app.get("/", async(req, res) => {
+app.use("/scripts", express.static("scripts"))
+
+app.use("/api", require("./kasql/api"))
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "server", "public", "index.html"))
+})
+
+app.get("/old", async(req, res) => {
+    const situationals = await Situational.query();
     const items = await Example.query().withGraphFetched("situationals")
 
-    var html = "<h1>AI PAT</h1><div style='display: flex; flex-direction: row; flex-wrap: wrap; width: 100%;'>";
+    var html = "<h1>AI PAT</h1>";
+    html += "<div>";
+    for(let situational of situationals){
+        html += "<button>"+situational.title+"</button>"
+    }
+    html += "</div>"
+    html += "<div style='display: flex; flex-direction: row; flex-wrap: wrap; width: 100%;'>";
     for(let item of items){
         html += "<div style='width: 250px; height: 300px; border: 1px solid #000; margin: 10px; padding: 10px; overflow: auto;'>";
         html += "<b>"+item.title+"</b><br>"
