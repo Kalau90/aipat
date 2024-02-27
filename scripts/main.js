@@ -40,6 +40,10 @@ class Cockpit{
         })
     }
 
+    openPopup(){
+        alert("HEJ")
+    }
+
     makeItems(items){
         const wrap = document.getElementById("items")
         wrap.innerHTML = "";
@@ -50,9 +54,10 @@ class Cockpit{
                 break;
             }
             const box = document.createElement("div");
-            box.innerHTML += "<div>"+item.name+"</div>";
-            box.innerHTML = "<span class='heading'>"+item.title+"</span>";
-            box.innerHTML += "<button>Læs mere</button>"
+            box.innerHTML += "<div class='caseno'>"+item.name+"</div>";
+            box.innerHTML += "<span class='heading'>"+item.title+"</span>";
+            box.innerHTML += "<div class='manchet'>"+item.description+"</div>";
+            box.innerHTML += "<button onClick='console.log(\"hej\");'>Læs mere</button>"
             box.classList.add("box")
             wrap.appendChild(box)
         }
@@ -118,7 +123,13 @@ class Cockpit{
         /* LOADING MAIN... */
         const main_wrap = document.createElement("div")
         main_wrap.classList.add("items")
-        main_wrap.id = "items"
+        main_wrap.id = "items";
+
+        const popup = document.createElement("div");
+        popup.classList.add("popup");
+        popup.innerHTML = "<h1>Dette er en popup</h1>"
+
+        main_wrap.appendChild(popup)
 
         /* FIT INTO HEAD AND MAIN */
         const header = document.createElement("div")
