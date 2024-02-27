@@ -98,6 +98,16 @@ html{
 
 .popup > .heading{
     font-size: 20pt;
+    height: 10%;
+}
+
+.popup > .description{
+    height: 80%;
+    overflow: auto;
+}
+
+.popup > .close{
+    height: 10%;
 }
 
 .box{

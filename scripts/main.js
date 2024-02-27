@@ -57,7 +57,7 @@ class Cockpit{
 
         const case_description = document.createElement("div")
         case_description.classList.add("description")
-        case_description.innerText = item.description;
+        case_description.innerHTML = item.description;
         popup.appendChild(case_description)
 
         const close = document.createElement("button")
