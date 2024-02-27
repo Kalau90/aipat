@@ -35,7 +35,7 @@ html{
 }
 
 .top > button{
-    width: 15%;
+    width: 16%;
     margin: 1vh 1% 0.5vh;
     border-radius: 10px;
     font-size: clamp(2px, 1vw, 10pt);
@@ -79,15 +79,14 @@ html{
 }
 
 .popup{
-    /*display: block;*/
-    display: none;
-    width: 96%;
-    height: 90%;
+    display: block;
+    width: 86%;
+    height: 80%;
     position: absolute;
-    top: 4%;
-    left: 1%;
-    right: 1%;
-    bottom: 4%;
+    top: 9%;
+    left: 6%;
+    right: 6%;
+    bottom: 9%;
     background: #eee;
     z-index: 2;
     padding: 1%;
@@ -97,12 +96,16 @@ html{
     display: none;
 }
 
+.popup > .heading{
+    font-size: 20pt;
+}
+
 .box{
     border: 1px solid #000;
     width: 310px;
     height: 110px;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -122,7 +125,7 @@ html{
 .box > .heading{
     height: 30%;
     font-weight: bold;
-    font-size: 13pt;
+    font-size: 11pt;
     background: white;
     display: block;
 }
