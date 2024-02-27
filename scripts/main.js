@@ -59,6 +59,13 @@ class Cockpit{
         case_description.innerHTML = item.description;
         popup.appendChild(case_description)
 
+        const close = document.createElement("button")
+        close.innerText = "Close";
+        close.addEventListener("click", () => {
+            popup.classList.add("popup--hidden")
+        })
+        case_heading.appendChild(close)
+        
         const printing = document.createElement("button")
         printing.innerText = "Print";
         printing.addEventListener("click", () => {
@@ -68,13 +75,6 @@ class Cockpit{
             );
         })
         case_heading.appendChild(printing)
-
-        const close = document.createElement("button")
-        close.innerText = "Close";
-        close.addEventListener("click", () => {
-            popup.classList.add("popup--hidden")
-        })
-        case_heading.appendChild(close)
 
         popup.classList.remove("popup--hidden")
     }
