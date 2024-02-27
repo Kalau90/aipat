@@ -59,12 +59,22 @@ class Cockpit{
         case_description.innerHTML = item.description;
         popup.appendChild(case_description)
 
+        const printing = document.createElement("button")
+        printing.innerText = "Print";
+        printing.addEventListener("click", () => {
+            window.open(
+                item.attachment,
+                '_blank' // <- This is what makes it open in a new window.
+            );
+        })
+        case_heading.appendChild(printing)
+
         const close = document.createElement("button")
-        close.innerText = "Back";
+        close.innerText = "Close";
         close.addEventListener("click", () => {
             popup.classList.add("popup--hidden")
         })
-        popup.appendChild(close)
+        case_heading.appendChild(close)
 
         popup.classList.remove("popup--hidden")
     }

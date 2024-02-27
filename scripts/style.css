@@ -90,6 +90,7 @@ html{
     background: #eee;
     z-index: 2;
     padding: 1%;
+    padding-top: 5%;
 }
 
 .popup--hidden{
@@ -101,13 +102,13 @@ html{
     height: 10%;
 }
 
-.popup > .description{
-    height: 80%;
-    overflow: auto;
+.popup > .heading > button{
+    float: right;
 }
 
-.popup > .close{
-    height: 10%;
+.popup > .description{
+    height: 90%;
+    overflow: auto;
 }
 
 .box{
