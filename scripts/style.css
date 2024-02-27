@@ -119,6 +119,7 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 5px;
 }
 
 .caseno{
@@ -146,7 +147,7 @@ html{
 }
 
 .readmore > button{
-    width: 70%;
+    width: 40%;
     margin: auto;
     font-size: 8pt;
 }
