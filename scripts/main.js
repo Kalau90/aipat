@@ -44,7 +44,6 @@ class Cockpit{
 
     async openPopup(id){
         const item = await this.callAPI(this.itemEndpoint+id)
-        console.log(item.title)
 
         const popup = document.getElementById("popup");
 
@@ -96,11 +95,16 @@ class Cockpit{
             manchet.innerText = item.description;
             box.appendChild(manchet)
             
-            const readmore = document.createElement("button")
-            readmore.addEventListener("click", () => {
+            const readmore = document.createElement("div")
+            readmore.classList.add("readmore")
+
+            const readmore_button = document.createElement("button")
+            readmore_button.addEventListener("click", () => {
                 this.openPopup(item.recid);
             })
-            readmore.innerText = "Read more";
+            readmore.appendChild(readmore_button)
+            
+            readmore_button.innerText = "Read more";
             box.appendChild(readmore);
 
             box.classList.add("box")
