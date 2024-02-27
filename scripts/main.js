@@ -92,7 +92,7 @@ class Cockpit{
             
             const manchet = document.createElement("div")
             manchet.classList.add("manchet")
-            manchet.innerText = item.description;
+            manchet.innerHTML = item.description;
             box.appendChild(manchet)
             
             const readmore = document.createElement("div")
