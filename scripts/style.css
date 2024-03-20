@@ -2,10 +2,32 @@ html{
     font-size: 100%;
 }
 
-.top{
+.top--buttons{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left--buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.right--buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     width: 100%;
     max-width: 800px;
@@ -13,28 +35,42 @@ html{
     margin: auto;
 }
 
+.top > .label{
+    margin: auto;
+}
+
 .left{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: center;
-    width: 12%;
+    width: 14%;
+}
+
+.left > .label{
+    margin: auto;
+    transform: rotate(90deg);
+}
+
+.right > .label{
+    margin: auto;
+    transform: rotate(90deg);
 }
 
 .right{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    width: 12%;
+    width: 14%;
 }
 
 .main{
     display: flex;
     flex-direction: row;
-    height: 80%;
+    height: 76%;
     justify-content: space-around;
 }
 
-.top > button{
+.top--buttons > button{
     width: 16%;
     margin: 1vh 1% 0.5vh;
     border-radius: 10px;
@@ -47,7 +83,7 @@ html{
     text-align: center;
 }
 
-.right > button{
+.right--buttons > button{
     margin: 0.3vw;
     border-radius: 10px;
     font-size: clamp(2px, 1vw, 10pt);
@@ -57,7 +93,7 @@ html{
     text-transform: uppercase;
 }
 
-.left > button{
+.left--buttons > button{
     margin: 0.3vw;
     border-radius: 10px;
     font-size: clamp(2px, 1vw, 10pt);
@@ -89,21 +125,28 @@ html{
     bottom: 9%;
     background: #eee;
     z-index: 2;
-    padding: 1%;
-    padding-top: 5%;
+    padding: 3%;
+}
+
+.popup--background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /*width: 100%;
+    height: 100%;*/
+    z-index: 1;
 }
 
 .popup--hidden{
     display: none;
 }
 
-.popup > .heading{
+.case--heading{
     font-size: 20pt;
     height: 10%;
-}
-
-.popup > .heading > button{
-    float: right;
 }
 
 .popup > .description{
@@ -161,17 +204,17 @@ html{
     text-align: center;
 }
 
-.top > button.sel {
+.top--buttons > button.sel {
     color: rgb(229, 200, 69);
     background: #27242d !important;
 }
 
-.left > button.sel {
+.left--buttons > button.sel {
     color: rgb(229, 200, 69);
     background: #5f586f !important;
 }
 
-.right > button.sel {
+.right--buttons > button.sel {
     color: rgb(229, 200, 69);
     background: #27242d !important;
 }

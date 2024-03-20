@@ -46,37 +46,67 @@ class Cockpit{
         const item = await this.callAPI(this.itemEndpoint+id)
 
         const popup = document.getElementById("popup");
+        const popup_background = document.getElementById("popup--background")
 
         popup.innerHTML = "";
 
+        const header = document.createElement("div")
+        header.style.display = "flex"
+        header.style.flexDirection = "row"
+        header.style.width = "100%"
+
+        // heading to 'header'
         const case_heading = document.createElement("span")
-        case_heading.classList.add("heading")
+        case_heading.classList.add("case--heading")
         case_heading.innerText = item.title;
-        popup.appendChild(case_heading);
+        case_heading.style.width = "80%"
+        case_heading.style.marginRight = "2%"
+        header.appendChild(case_heading)
 
-        const case_description = document.createElement("div")
-        case_description.classList.add("description")
-        case_description.innerHTML = item.description;
-        popup.appendChild(case_description)
+        const case_buttons = document.createElement("div")
+        case_buttons.style.display = "flex";
+        case_buttons.style.flexDirection = "column"
+        case_buttons.style.width = "18%"
+        //case_buttons.style.justifyContent = "center"
 
-        const close = document.createElement("button")
-        close.innerText = "Close";
-        close.addEventListener("click", () => {
-            popup.classList.add("popup--hidden")
-        })
-        case_heading.appendChild(close)
-        
+        // download button to 'header'
         const printing = document.createElement("button")
-        printing.innerText = "Print";
+        printing.innerText = "Download";
+        printing.style.width = "100%"
+        printing.style.height = "20px"
         printing.addEventListener("click", () => {
             window.open(
                 item.attachment,
                 '_blank' // <- This is what makes it open in a new window.
             );
         })
-        case_heading.appendChild(printing)
+        case_buttons.appendChild(printing)
+
+        // close button to 'header'
+        const close = document.createElement("button")
+        close.innerText = "Close";
+        close.style.width = "100%";
+        close.style.height = "20px"
+        close.addEventListener("click", () => {
+            popup.classList.add("popup--hidden")
+            popup_background.classList.add("popup--hidden")
+        })
+        case_buttons.appendChild(close)
+
+        header.appendChild(case_buttons)
+
+        // append header to popup
+        popup.appendChild(header);
+
+        const case_description = document.createElement("div")
+        case_description.classList.add("description")
+        case_description.innerHTML = item.description;
+        popup.appendChild(case_description)
+
+        
 
         popup.classList.remove("popup--hidden")
+        popup_background.classList.remove("popup--hidden")
     }
 
     makeItems(items){
@@ -127,9 +157,15 @@ class Cockpit{
         popup.classList.add("popup--hidden");
         popup.id="popup"
 
-        popup.innerHTML = "<h1>Dette er en popup</h1>"
-
         wrap.appendChild(popup)
+
+        // popup background
+        const popup_background = document.createElement("div");
+        popup_background.classList.add("popup--background");
+        popup_background.classList.add("popup--hidden");
+        popup_background.id="popup--background"
+
+        wrap.appendChild(popup_background)
     }
 
     async showItems(){
@@ -158,13 +194,23 @@ class Cockpit{
         //console.log(this); //.classList.add("sel")
         target.classList.add("sel")
 
-        this[wrap_classname+"_id"] = target.dataset.recid;
+        const wrapper = wrap_classname.split("--")[0]
+        this[wrapper+"_id"] = target.dataset.recid;
         this.showItems();
     }
 
-    makeButtons(items, wrap_classname){
+    makeButtons(items, wrap_classname, labeltext){
         const wrap = document.createElement("div")
         wrap.classList.add(wrap_classname)
+
+        const label = document.createElement("div")
+        label.innerText = labeltext;
+        label.classList.add("label")
+        wrap.appendChild(label)
+
+        const buttons = document.createElement("div")
+        buttons.classList.add(wrap_classname+"--buttons")
+
         for(let item of items){
             const button = document.createElement("button")
             button.innerText = item.title;
@@ -172,22 +218,24 @@ class Cockpit{
             button.dataset.recid = item.recid;
             button.addEventListener("click", (e) => {
                 const wrap = e.target.dataset.wrapclassname;
-                this.selectButton(e.target, wrap);
+                this.selectButton(e.target, wrap_classname+"--buttons");
             })
-            wrap.appendChild(button)
+            buttons.appendChild(button)
         }
+        wrap.appendChild(buttons)
+
         return wrap;
     }
 
     async render(){
         const top_items = await this.callAPI(this.topEndpoint)
-        const top_wrap = this.makeButtons(top_items, "top")
+        const top_wrap = this.makeButtons(top_items, "top", "Situational")
 
         const right_items = await this.callAPI(this.rightEndpoint)
-        const right_wrap = this.makeButtons(right_items, "right")
+        const right_wrap = this.makeButtons(right_items, "right", "Complexity")
 
         const left_items = await this.callAPI(this.leftEndpoint)
-        const left_wrap = this.makeButtons(left_items, "left")
+        const left_wrap = this.makeButtons(left_items, "left", "Faculty")
 
         /* LOADING MAIN... */
         const main_wrap = document.createElement("div")
