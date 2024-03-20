@@ -56,5 +56,5 @@ app.get("*", async(req, res) => {
 })
 
 app.listen(port, () => {
-    console.log("Listening on port" + port)
+    console.log("Server is listening on http://localhost:" + port)
 })

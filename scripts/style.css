@@ -2,21 +2,6 @@ html{
     font-size: 100%;
 }
 
-.top--buttons{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.left--buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 93%;
-}
-
 .top{
     display: flex;
     justify-content: space-between;
@@ -31,76 +16,16 @@ html{
 
 .top > .label--wrap{
     margin: auto;
-    height: 10%;
+    height: 20%;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.left{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    width: 14%;
-}
-
-.left > .label--wrap{
-    margin: auto;
+.top--buttons{
     width: 100%;
-    height: 10%;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-
-.right{
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    /*justify-content: center;
-    align-items: center;*/
-    width: 14%;
-    background: blue;
-}
-
-.right > .label--wrap{
-    /*position: relative;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    /*overflow: hidden;*/
-    width: 7%;
-    max-width: 7%;
-    min-width: 7%;
-    /*height: 5%;*/
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.right > .label--wrap > .label{
-    transform: rotate(90deg);
-}
-
-.right--buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 93%;
-}
-
-.right--buttons > button{
-    margin: 0.3vw;
-    border-radius: 10px;
-    font-size: clamp(2px, 1vw, 10pt);
-    padding: 10px;
-    background: #5f586f;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.main{
-    display: flex;
-    flex-direction: row;
-    height: 76%;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .top--buttons > button{
@@ -116,7 +41,40 @@ html{
     text-align: center;
 }
 
+.top--buttons > button.sel {
+    color: rgb(229, 200, 69);
+    background: #27242d !important;
+}
 
+.left{
+    display: flex;
+    flex-direction: row-reverse;
+    /*justify-content: center;*/
+    width: 14%;
+}
+
+.left > .label--wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.left > .label--wrap > .label{
+    transform: rotate(90deg);
+}
+
+.left--buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
 
 .left--buttons > button{
     margin: 0.3vw;
@@ -126,6 +84,62 @@ html{
     background: #27242d;
     color: #fff;
     text-transform: uppercase;
+}
+
+.left--buttons > button.sel {
+    color: rgb(229, 200, 69);
+    background: #5f586f !important;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    width: 14%;
+}
+
+.right > .label--wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.right > .label--wrap > .label{
+    transform: rotate(90deg);
+}
+
+.right--buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+
+.right--buttons > button{
+    margin: 0.3vw;
+    border-radius: 10px;
+    font-size: clamp(2px, 1vw, 10pt);
+    padding: 10px;
+    background: #5f586f;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.right--buttons > button.sel {
+    color: rgb(229, 200, 69);
+    background: #27242d !important;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    height: 76%;
+    justify-content: space-around;
 }
 
 .items{
@@ -221,25 +235,9 @@ html{
     font-size: 8pt;
 }
 
-
 .readmore{
     border-radius: 5px;
     width: 100%;
     height: 20%;
     text-align: center;
-}
-
-.top--buttons > button.sel {
-    color: rgb(229, 200, 69);
-    background: #27242d !important;
-}
-
-.left--buttons > button.sel {
-    color: rgb(229, 200, 69);
-    background: #5f586f !important;
-}
-
-.right--buttons > button.sel {
-    color: rgb(229, 200, 69);
-    background: #27242d !important;
 }
