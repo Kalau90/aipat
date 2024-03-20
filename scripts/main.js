@@ -203,10 +203,15 @@ class Cockpit{
         const wrap = document.createElement("div")
         wrap.classList.add(wrap_classname)
 
+        const label_wrap = document.createElement("div")
+        label_wrap.classList.add("label--wrap")
+
         const label = document.createElement("div")
-        label.innerText = labeltext;
         label.classList.add("label")
-        wrap.appendChild(label)
+        label.innerText = labeltext;
+
+        label_wrap.appendChild(label)
+        wrap.appendChild(label_wrap)
 
         const buttons = document.createElement("div")
         buttons.classList.add(wrap_classname+"--buttons")
