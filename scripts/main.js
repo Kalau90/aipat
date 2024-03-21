@@ -247,11 +247,13 @@ class Cockpit{
         main_wrap.classList.add("items")
         main_wrap.id = "items";
 
-        main_wrap.innerHTML = `<div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;"><div class="textnormal" style="text-align: center; font-size: 20px;"><span style="color: #0b0b0b; font-size: 20px; font-weight: bold;">Welcome to the AI-PAT system</span></div>
+        main_wrap.innerHTML = `<div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;"><div class="textnormal" style="text-align: center; font-size: 20px;"><span style="color: #0b0b0b; font-size: 20pt; font-weight: bold;">Welcome to the AI-PAT system</span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">The project is under development and will grow in cases and features.</span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">Feedback and suggestions are useful</span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
-        <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">SELECT FACULTY, SITUATIONAL AND COMPLEXITY&nbsp;</span></div>
+        <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
+        <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b; font-size: 18pt; font-weight: bold;">SELECT FACULTY, SITUATIONAL<br>AND COMPLEXITY&nbsp;</span></div>
+        <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">Best regards</span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">/Mads</span></div></div>`
