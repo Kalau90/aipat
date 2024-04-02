@@ -6,6 +6,24 @@ const path = require("path")
 const db = require("./knexfile")
 const knex = require("knex")(db)
 
+/* Init matomo to track */
+/*var MatomoTracker = require('matomo-tracker');
+var matomo = new MatomoTracker(1, 'http://mywebsite.com/matomo.php');
+
+// Optional: Respond to tracking errors
+matomo.on('error', function(err) {
+    console.log('error tracking request: ', err);
+});
+
+app.use((req, res, next) => {
+    console.log("LOL", req.url)
+    matomo.track({
+        url: req.url,
+        cvar: JSON.stringify({ ... req.query })
+    });
+    next();
+})*/
+
 const { Example, Situational } = require("./kasql/out/models")
 
 app.use("/admin", require("./server/admin"))

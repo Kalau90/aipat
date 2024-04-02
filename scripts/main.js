@@ -43,7 +43,10 @@ class Cockpit{
     }
 
     async openPopup(id){
+        //console.log("HER?", id, _paq)
         const item = await this.callAPI(this.itemEndpoint+id)
+
+        _paq.push(['trackEvent', 'example', 'Open', item.title]);
 
         const popup = document.getElementById("popup");
         const popup_background = document.getElementById("popup--background")
@@ -75,6 +78,7 @@ class Cockpit{
         printing.style.width = "100%"
         printing.style.height = "20px"
         printing.addEventListener("click", () => {
+            _paq.push(['trackEvent', 'example', 'Download', item.title]);
             window.open(
                 item.attachment,
                 '_blank' // <- This is what makes it open in a new window.
@@ -88,6 +92,7 @@ class Cockpit{
         close.style.width = "100%";
         close.style.height = "20px"
         close.addEventListener("click", () => {
+            _paq.push(['trackEvent', 'example', 'Close', item.title]);
             popup.classList.add("popup--hidden")
             popup_background.classList.add("popup--hidden")
         })
@@ -102,8 +107,6 @@ class Cockpit{
         case_description.classList.add("description")
         case_description.innerHTML = item.description;
         popup.appendChild(case_description)
-
-        
 
         popup.classList.remove("popup--hidden")
         popup_background.classList.remove("popup--hidden")
@@ -175,6 +178,8 @@ class Cockpit{
             query_params += this.left_queryparam+"="+this.left_id+"&"
             query_params += this.top_queryparam+"="+this.top_id+"&"
             query_params += this.right_queryparam+"="+this.right_id
+
+            _paq.push(['trackEvent', 'browse', 'Change', query_params]);
 
             const items = await this.callAPI("/filterItems/examples"+query_params)
 
