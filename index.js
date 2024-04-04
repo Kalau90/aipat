@@ -28,13 +28,13 @@ const { Example, Situational } = require("./kasql/out/models")
 
 app.use("/admin", require("./server/admin"))
 
-app.use("/scripts", express.static("scripts"))
-
 app.use("/api", require("./kasql/api"))
 
-app.get("/", (req, res) => {
+app.use("/", express.static(path.join(__dirname, "server", "public")))
+
+/*app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "server", "public", "index.html"))
-})
+})*/
 
 function getIntersection(arr1, arr2){
     return arr1.filter(value => arr2.includes(value));

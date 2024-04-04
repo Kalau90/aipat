@@ -8,7 +8,7 @@ router.use(require("./lib/simpleAuth"))
 router.use("/kasql", require("./../kasql/router"))
 
 router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "import.html"))
+    res.sendFile(path.join(__dirname, "import.html"))
 })
 
 module.exports = router;
