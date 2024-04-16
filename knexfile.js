@@ -1,15 +1,23 @@
 /* Import MySQL configuration from '.env' */
 require('dotenv-flow').config();
 
-/* Construct DB_URL from parameters */
-const DB_URL = "mysql://"+process.env.MYSQL_USERNAME+":"+process.env.MYSQL_ROOT_PASSWORD+"@"+process.env.MYSQL_HOST+":"+process.env.MYSQL_PORT+"/"+process.env.MYSQL_DATABASE
+const { MYSQL_HOST, MYSQL_USERNAME, MYSQL_ROOT_PASSWORD, MYSQL_PORT, MYSQL_DATABASE } = process.env;
 
-console.log("Connect to MySQL-server: "+process.env.MYSQL_DATABASE+"@"+process.env.MYSQL_HOST+":"+process.env.MYSQL_PORT);
+/* Construct DB_URL from parameters */
+const DB_URL = "mysql://"+MYSQL_USERNAME+":"+MYSQL_ROOT_PASSWORD+"@"+MYSQL_HOST+":"+MYSQL_PORT+"/"+MYSQL_DATABASE
+
+console.log("Connect to MySQL-server: "+MYSQL_USERNAME+":"+"*".repeat(MYSQL_ROOT_PASSWORD.length)+"@"+MYSQL_HOST+":"+MYSQL_PORT + "/" + MYSQL_DATABASE);
 
 /* Setup with mysql and export */
 module.exports = {
   client: 'mysql',
-  connection: DB_URL,
+  connection: {
+    host: MYSQL_HOST,
+    port: MYSQL_PORT,
+    user: MYSQL_USERNAME,
+    password: MYSQL_ROOT_PASSWORD,
+    database: MYSQL_DATABASE,
+  },
   migrations: {
     directory: __dirname + '/server/migrations'
   }
