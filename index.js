@@ -6,35 +6,20 @@ const path = require("path")
 const db = require("./knexfile")
 const knex = require("knex")(db)
 
-/* Init matomo to track */
-/*var MatomoTracker = require('matomo-tracker');
-var matomo = new MatomoTracker(1, 'http://mywebsite.com/matomo.php');
-
-// Optional: Respond to tracking errors
-matomo.on('error', function(err) {
-    console.log('error tracking request: ', err);
-});
-
-app.use((req, res, next) => {
-    console.log("LOL", req.url)
-    matomo.track({
-        url: req.url,
-        cvar: JSON.stringify({ ... req.query })
-    });
-    next();
-})*/
-
 const { Example, Situational } = require("./kasql/out/models")
 
 app.use("/admin", require("./server/admin"))
 
 app.use("/api", require("./kasql/api"))
 
-app.use("/", express.static(path.join(__dirname, "server", "public")))
+app.engine('html', require('ejs').renderFile);
 
-/*app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "server", "public", "index.html"))
-})*/
+app.get("/", (req, res) => {
+    const { MATOMO_URL, MATOMO_SITEID } = process.env;
+    res.render(__dirname + "/server/public/index.html", { MATOMO_URL, MATOMO_SITEID });
+})
+
+app.use("/", express.static(path.join(__dirname, "server", "public")))
 
 function getIntersection(arr1, arr2){
     return arr1.filter(value => arr2.includes(value));

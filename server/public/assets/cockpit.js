@@ -13,6 +13,10 @@ class Cockpit{
         this.left_queryparam = null;
         this.right_queryparam = null;
         this.top_queryparam = null;
+
+        this.top_items = null;
+        this.left_items = null;
+        this.right_items = null;
     }
 
     configure(params){
@@ -174,20 +178,38 @@ class Cockpit{
     async showItems(){
         //console.log(this.left_id, this.top_id, this.right_id)
         if(this.left_id && this.top_id && this.right_id){
+            // Track the click
+            if(Array.isArray(this.top_items) && Array.isArray(this.left_items) && Array.isArray(this.right_items)){
+                const top_value = this.top_items.find((v) => {
+                    return v.recid == this.top_id
+                })
+
+                const left_value = this.left_items.find((v) => {
+                    return v.recid == this.left_id;
+                })
+
+                const right_value = this.right_items.find((v) => {
+                    return v.recid == this.right_id
+                })
+
+                let q_str = this.top_queryparam+"="+top_value.title;
+                q_str += ", " + this.left_queryparam + "=" + left_value.title;
+                q_str += ", " + this.right_queryparam + "=" + right_value.title;
+                console.log(q_str)
+                _paq.push(['trackEvent', 'browse', 'Change', q_str]);
+            }
+
+            // Make query parameters for item request
             var query_params = "?";
             query_params += this.left_queryparam+"="+this.left_id+"&"
             query_params += this.top_queryparam+"="+this.top_id+"&"
             query_params += this.right_queryparam+"="+this.right_id
 
-            _paq.push(['trackEvent', 'browse', 'Change', query_params]);
-
+            // Call the API
             const items = await this.callAPI("/filterItems/examples"+query_params)
 
-            //console.log(items)
+            // Render the items
             this.makeItems(items);
-        }else{
-            //document.getElementById("main").innerHTML = "nej..."
-            console.log("NEJ...")
         }
     }
 
@@ -196,11 +218,16 @@ class Cockpit{
         for(let button of wrap.children){
             button.classList.remove("sel")
         }
+
         //console.log(this); //.classList.add("sel")
         target.classList.add("sel")
 
         const wrapper = wrap_classname.split("--")[0]
         this[wrapper+"_id"] = target.dataset.recid;
+        if(document.getElementById(wrapper + "--status")){
+            document.getElementById(wrapper + "--status").style.color="#0a0";
+        }
+        
         this.showItems();
     }
 
@@ -238,14 +265,14 @@ class Cockpit{
     }
 
     async render(){
-        const top_items = await this.callAPI(this.topEndpoint)
-        const top_wrap = this.makeButtons(top_items, "top", "Situational")
+        this.top_items = await this.callAPI(this.topEndpoint)
+        const top_wrap = this.makeButtons(this.top_items, "top", "Situational")
 
-        const right_items = await this.callAPI(this.rightEndpoint)
-        const right_wrap = this.makeButtons(right_items, "right", "Complexity")
+        this.right_items = await this.callAPI(this.rightEndpoint)
+        const right_wrap = this.makeButtons(this.right_items, "right", "Complexity")
 
-        const left_items = await this.callAPI(this.leftEndpoint)
-        const left_wrap = this.makeButtons(left_items, "left", "Faculty")
+        this.left_items = await this.callAPI(this.leftEndpoint)
+        const left_wrap = this.makeButtons(this.left_items, "left", "Faculty")
 
         /* LOADING MAIN... */
         const main_wrap = document.createElement("div")
@@ -257,7 +284,14 @@ class Cockpit{
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">Feedback and suggestions are useful</span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
-        <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b; font-size: 18pt; font-weight: bold;">SELECT FACULTY, SITUATIONAL<br>AND COMPLEXITY&nbsp;</span></div>
+        <div class="textnormal" style="text-align: center;">
+            <span style="color: #0b0b0b; font-size: 18pt; font-weight: bold;">
+                SELECT<br>
+                <span id="left--status">1. FACULTY</span><br>
+                <span id="top--status">2. SITUATIONAL</span><br>
+                <span id="right--status">3. COMPLEXITY</span>
+            </span>
+        </div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">Best regards</span></div>
