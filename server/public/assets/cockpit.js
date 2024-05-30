@@ -279,7 +279,7 @@ class Cockpit{
         main_wrap.classList.add("items")
         main_wrap.id = "items";
 
-        main_wrap.innerHTML = `<div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;"><div class="textnormal" style="text-align: center; font-size: 20px;"><span style="color: #0b0b0b; font-size: 20pt; font-weight: bold;">Welcome to the AI-PAT system</span></div>
+        /*main_wrap.innerHTML = `<div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;"><div class="textnormal" style="text-align: center; font-size: 20px;"><span style="color: #0b0b0b; font-size: 20pt; font-weight: bold;">Welcome to the AI-PAT system</span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">The project is under development and will grow in cases and features.</span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">Feedback and suggestions are useful</span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
@@ -295,7 +295,7 @@ class Cockpit{
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;"><br></span></div>
         <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">Best regards</span></div>
-        <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">/Mads</span></div></div>`
+        <div class="textnormal" style="text-align: center;"><span style="color: #0b0b0b;">/Mads</span></div></div>`*/
 
         /* FIT INTO HEAD AND MAIN */
         const header = document.createElement("div")
@@ -309,5 +309,10 @@ class Cockpit{
 
         this.elm.appendChild(header)
         this.elm.appendChild(body)
+
+        /* AUTO-SELECT THE FIRST BUTTON IN EACH SECTION */
+        this.selectButton(top_wrap.getElementsByClassName("top--buttons")[0].getElementsByTagName("button")[0], "top")
+        this.selectButton(left_wrap.getElementsByClassName("left--buttons")[0].getElementsByTagName("button")[0], "left")
+        this.selectButton(right_wrap.getElementsByClassName("right--buttons")[0].getElementsByTagName("button")[0], "right")
     }
 }
